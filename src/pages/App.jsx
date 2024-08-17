@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import {Nav,Hero,About,Footer} from "../sections/index.js";
 
 function App() {
-
   return (
-    <>
-      <h1>hello</h1>
-    </>
-  )
+    <main className="relative">
+    <Nav page="home" />
+    <section id="home">
+      <Hero />
+    </section>
+    <section id="about-us">
+      <About />
+    </section>
+    <section id="contact-us">
+      <Footer />
+    </section>
+  </main>
+  );
 }
 
-export default App
+export default App;
