@@ -18,7 +18,7 @@ const Dashboard = () => {
       <div className="items-center bg-gray-100 mb-4">
         <div className="bg-white shadow-md w-full h-screen pt-40">
           <h2 className="text-8xl font-bold text-center text-green-500">
-            Welcome To <Typewriter text="Zero Waste Business Game" />
+            Welcome To <Typewriter text="WasteZero" />
           </h2>
           <p className="text-center text-2xl font-bold text-green-600">Scroll Down</p>
           <img
