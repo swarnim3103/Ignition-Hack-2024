@@ -4,6 +4,7 @@ import {
   Signin,
   Dashboard,
   Signup,
+  Game,
 } from "./src/pages/index.js";
 
 function Router() {
@@ -14,6 +15,7 @@ function Router() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </BrowserRouter>
   );

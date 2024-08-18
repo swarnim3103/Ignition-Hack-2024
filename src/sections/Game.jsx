@@ -1,59 +1,29 @@
 import React, { useState } from 'react';
+import { gameData } from './GameData';
+import GameDashboard from '../sections/GameDashboard';
+import ScoreTracker from '../sections/ScoreTracker';
 
-const Game = () => {
-  const [funds, setFunds] = useState(100);
-  const [waste, setWaste] = useState(0);
-  const [resources, setResources] = useState(100);
+function Game() {
+  const [currentLevel, setCurrentLevel] = useState(0);
+  const [wasteLevel, setWasteLevel] = useState(0);
 
-  const produceGoods = () => {
-    const productionCost = 10;
-    const wasteProduced = 2;
-    const revenue = 20;
-
-    if (resources >= productionCost) {
-      setResources(resources - productionCost);
-      setWaste(waste + wasteProduced);
-      setFunds(funds + revenue);
+  const handleDecision = (impact) => {
+    setWasteLevel(wasteLevel + impact);
+    if (currentLevel < gameData.length - 1) {
+      setCurrentLevel(currentLevel + 1);
     } else {
-      alert("Not enough resources to produce goods.");
-    }
-  };
-
-  const recycleWaste = () => {
-    const recyclingCost = 5;
-
-    if (funds >= recyclingCost && waste > 0) {
-      setWaste(waste - 1);
-      setFunds(funds - recyclingCost);
-    } else {
-      alert("Not enough funds or no waste to recycle.");
+      alert(`Game Over! Your final waste level is: ${wasteLevel}`);
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
-      <h1 className="text-3xl font-bold mb-8 text-green-700">Zero Waste Business Game</h1>
-      <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-        <div className="mb-4">
-          <p className="text-lg"><strong>Funds:</strong> ${funds}</p>
-          <p className="text-lg"><strong>Resources:</strong> {resources}</p>
-          <p className="text-lg"><strong>Waste:</strong> {waste} units</p>
-        </div>
-        <div className="flex justify-around">
-          <button
-            onClick={produceGoods}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Produce Goods
-          </button>
-          <button
-            onClick={recycleWaste}
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Recycle Waste
-          </button>
-        </div>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold text-green-700 mb-6">Waste Zero Game</h1>
+      <ScoreTracker wasteLevel={wasteLevel} />
+      <GameDashboard 
+        levelData={gameData[currentLevel]} 
+        onDecision={handleDecision} 
+      />
     </div>
   );
 }
