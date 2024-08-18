@@ -51,6 +51,7 @@ function Nav({ page }) {
           })}
         </ul>
         <div className="flex gap-5 mr-5 max-md:hidden text-xl cursor-pointer">
+        {page === "home" && <Link to="/signup" className="underline font-bold">Get Started</Link>}
           {page === "home" && <Link to="/signin">Login</Link>}
           {page !== "home" && <Link to="/">Logout</Link>}
         </div>
@@ -76,6 +77,7 @@ function Nav({ page }) {
               ));
             }
           })}
+          
           <li className="cursor-pointer">
             <Link to={"/signin"}>Login</Link>
           </li>
