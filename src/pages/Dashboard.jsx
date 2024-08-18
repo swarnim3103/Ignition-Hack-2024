@@ -39,7 +39,10 @@ const Dashboard = () => {
           <h1>Rank</h1>
         </div>
       </div>
-      <button className="bg-green-800 text-white px-4 py-2 rounded items-center justify-center m-auto"><Link to="/game">Let's Play</Link></button>
+      <div className="flex justify-center items-center mt-8">
+      <button className="bg-green-800 text-white px-8 py-4 rounded items-center justify-center m-auto text-2xl"><Link to="/game">Let's Play</Link></button>
+      </div>
+      
       <Footer />
     </>
   );
