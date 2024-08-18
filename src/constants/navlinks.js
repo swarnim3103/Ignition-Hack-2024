@@ -11,29 +11,14 @@ const navlinks = [
           link: "#about-us",
         },
         {
-          title: "Join Us",
-          link: "#join-us",
-        },
-        {
           title: "Contact",
           link: "#contact-us",
         },
-        // {
-        //   title: "Dashboard",
-        //   link: "/dashboard",
-        // },
-        // {
-        //   title:"Chapters",
-        //   link:"/chapters",
-        // },
-        // {
-        //   title:"Topic",
-        //   link:"/submodules",
-        // },
-        // {
-        //   title:"Logout",
-        //   link:"/",
-        // },
+        {
+          title:"Get Started",  
+          link:"/signup"
+        }
+       
       ],
     },
   ];

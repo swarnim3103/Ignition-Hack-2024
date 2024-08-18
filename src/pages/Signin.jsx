@@ -1,48 +1,31 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Signin = () => {
-  const CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
-
-  useEffect(() => {
-    const initializeGoogleSignIn = () => {
-      window.gapi.load('auth2', () => {
-        window.gapi.auth2.init({
-          client_id: CLIENT_ID,
-        });
-      });
-    };
-    
-    const addGoogleSignInButton = () => {
-      window.gapi.signin2.render('google-signin-button', {
-        scope: 'profile email',
-        width: 240,
-        height: 50,
-        longtitle: true,
-        theme: 'dark',
-      });
-    };
-
-    initializeGoogleSignIn();
-    addGoogleSignInButton();
-  }, []);
-
-  const onSuccess = (googleUser) => {
-    console.log('Logged in as:', googleUser.getBasicProfile().getName());
-    // Handle the login success, maybe send the token to your server
-  };
-
-  const onFailure = (error) => {
-    console.log('Google Sign-In failed:', error);
-  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-4 text-center">
-        <h1 className="text-2xl font-bold">Sign in to Your Account</h1>
-        <div id="google-signin-button"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6">
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h1 className="text-3xl font-bold mb-4">Login</h1>
+        <div id="google-signin-button" className="mb-6"></div>
+        <div>
+          <h2 className="text-xl font-semibold mb-2">Enter Your Credantials</h2>
+          <p className="mt-4 text-gray-400 mb-4">If new here get started  <Link to="/signup" className='underline'>with new account</Link></p>
+          <form>
+            <input type="email" placeholder="Email" className="w-full border border-gray-200 p-2 rounded mb-4" />
+            <input type="password" placeholder="Password" className="w-full border border-gray-200 p-2 rounded mb-4" />
+          </form>
+          <button className="bg-gray-800 text-white px-4 py-2 rounded">Login</button>
+          <p className="mt-4 text-gray-400">Back to <Link to="/" className='underline'>Dashboard</Link></p>
+        </div>
+      </div>
+      <div className="hidden md:block md:w-1/2 ml-20">
+        <img src="src\assets\icons\login-svgrepo-com.svg" alt="Visual Elements" className="" />
       </div>
     </div>
+  </div>
   );
 };
 
