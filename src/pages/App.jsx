@@ -1,4 +1,4 @@
-import {Nav,Hero,About,Footer,Typewriter} from "../sections/index.js";
+import {Nav,Hero,About,Footer,Timeline} from "../sections/index.js";
 
 function App() {
   return (
@@ -7,9 +7,13 @@ function App() {
     <section id="home">
       <Hero />
     </section>
+    
     <section id="about-us">
       <About />
     </section>
+    <section id="timeline">
+      <Timeline />
+      </section>
     <section id="contact-us">
       <Footer />
     </section>

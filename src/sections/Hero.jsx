@@ -1,7 +1,7 @@
 import {Typewriter} from "./index"
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-b from-green-50 from-4% via-green-400 via-20% to-green-800 to-100% h-3/4 flex justify-center items-center">
+    <div className="bg-gradient-to-b from-green-50 from-4% via-green-400 via-20% to-green-600 to-100% h-3/4 flex justify-center items-center">
   <div className="w-80 text-white">
     <Typewriter text="WasteZero" typingSpeed={100} erasingSpeed={50} delay={2000}
         />

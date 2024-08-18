@@ -7,5 +7,6 @@ import Game from "../sections/Game.jsx";
 import GameDashboard from "../sections/GameDashboard.jsx"; 
 import ScoreTracker from "../sections/ScoreTracker.jsx";
 import DecisionPanel from "./DecisionPanel.jsx";
+import Timeline from "../sections/Timeline.jsx";
 
-export { Nav, Footer, Hero, About , Typewriter, Game , GameDashboard , ScoreTracker , DecisionPanel };
+export { Nav, Footer, Hero, About , Typewriter, Game , GameDashboard , ScoreTracker , DecisionPanel,Timeline };
