@@ -14,10 +14,6 @@ const navlinks = [
           title: "Contact",
           link: "#contact-us",
         },
-        {
-          title:"Get Started",  
-          link:"/signup"
-        }
        
       ],
     },
