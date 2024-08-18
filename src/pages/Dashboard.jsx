@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../sections/Nav.jsx';
 import Footer from '../sections/Footer.jsx';
+import Game from '../sections/game.jsx';
 
 const Dashboard = () => {
   return (
@@ -13,6 +14,7 @@ const Dashboard = () => {
           </h2>
         </div>
       </div>
+      <Game />
       <div className="flex flex-col w-[90%] gap-4 mx-auto">
         {/* Add content here */}
       </div>
