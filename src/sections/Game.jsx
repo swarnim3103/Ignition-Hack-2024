@@ -4,6 +4,7 @@ import GameDashboard from '../sections/GameDashboard';
 import ScoreTracker from '../sections/ScoreTracker';
 import Nav from '../sections/Nav';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Game() {
   const [currentLevel, setCurrentLevel] = useState(0);
@@ -35,6 +36,7 @@ function Game() {
           onDecision={handleDecision} 
         />
       </div>
+      <button className="bg-green-50 text-black px-8 py-4 rounded items-center justify-center m-auto text-2xl"><Link to="/dashboard">Exit Game</Link></button>
       <Footer/>
     </div>
     </>
