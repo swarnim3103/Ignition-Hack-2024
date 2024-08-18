@@ -26,8 +26,8 @@ function Game() {
   return (
     <>
     <Nav/>
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-green-700 mb-6">Waste Zero Game</h1>
+    <div className="flex flex-col h-screen items-center bg-gradient-to-b from-white to-green-500">
+      <h1 className="text-4xl font-bold text-green-700 mb-20">Waste Zero Game</h1>
       <ScoreTracker wasteLevel={wasteLevel} />
       <div className={`transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
         <GameDashboard 
@@ -35,8 +35,8 @@ function Game() {
           onDecision={handleDecision} 
         />
       </div>
+      <Footer/>
     </div>
-    <Footer/>
     </>
   );
 }
