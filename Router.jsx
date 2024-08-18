@@ -4,8 +4,8 @@ import {
   Signin,
   Dashboard,
   Signup,
-  Game,
 } from "./src/pages/index.js";
+import {Game} from "./src/sections/index.js";
 
 function Router() {
   return (
