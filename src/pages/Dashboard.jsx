@@ -1,7 +1,6 @@
 import React from 'react';
 import Nav from '../sections/Nav.jsx';
 import Footer from '../sections/Footer.jsx';
-import Game from '../sections/game.jsx';
 import Typewriter from '../sections/Typewriter.jsx';
 import { Link } from 'react-router-dom';
 
