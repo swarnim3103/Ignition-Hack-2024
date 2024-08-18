@@ -1,4 +1,4 @@
-import {Nav,Hero,About,Footer} from "../sections/index.js";
+import {Nav,Hero,About,Footer,Typewriter} from "../sections/index.js";
 
 function App() {
   return (
